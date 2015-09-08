@@ -11,17 +11,21 @@
     <div class="container">
       <h1>Triangle Tracker</h1>
 
-      <form id="leap-year">
+      <form id="triangle">
         <div class="form-group">
-          <label for="year">Enter a year and find out if it's a leap year:</label>
-          <input id="year" type="text">
+            <label for="side1">Enter side 1:</label>
+            <input id="side1" type="number" min='1' required>
+            <label for="side2">Enter side 2:</label>
+            <input id="side2" type="number" min='1' required>
+            <label for="side3">Enter side 3:</label>
+            <input id="side3" type="number" min='1' required>
         </div>
 
         <button type="submit" class="btn">Find out!</button>
       </form>
 
       <div id="result">
-        <p><span class="year"></span> is <span class="not">not</span> a leap year.</p>
+        <p><span class="type"></span></p>
       </div>
     </div>
   </body>

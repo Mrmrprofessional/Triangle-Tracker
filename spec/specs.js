@@ -1,17 +1,18 @@
-describe('leapYear', function() {
-  it("is false for a year that is not divisible by 4", function() {
-    expect(leapYear(1999)).to.equal(false);
-  });
+describe('triangleTracker', function() {
 
-  it("is true for most years divisible by 4", function(){
-      expect(leapYear(2012)).to.equal(true);
-  });
+    it("is not a triangle if one side is greater than the sum of the others", function() {
+        expect(triangleTracker(5,2,2)).to.equal('not a triangle');
+    });
 
-  it("is false for most years divisible by 100", function() {
-      expect(leapYear(1900)).to.equal(false);
-  });
+    it("is equilateral for three sides that are all equal", function() {
+        expect(triangleTracker(5,5,5)).to.equal('equilateral');
+    });
 
-  it ("is true for most years divisible by 400", function() {
-      expect(leapYear(1200)).to.equal(true);
-  });
+    it("is isosceles for two sides that are equal", function() {
+        expect(triangleTracker(5,5,3)).to.equal('isosceles');
+    });
+
+    it("is scalene if no sides are equal", function() {
+        expect(triangleTracker(5,4,3)).to.equal('scalene');
+    })
 });
